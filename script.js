@@ -7,7 +7,7 @@ async function selectMediaStream(){
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
         videoElement.srcObject = mediaStream;
         videoElement.onloadedmetadata = () => {
-            videoElement.onplay();
+            videoElement.play();
         }
     }catch(error){
         console.log("there is an error: ", error);
